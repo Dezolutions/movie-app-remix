@@ -45,7 +45,7 @@ const Layout :React.FC<{children: ReactNode}> = ({children}) => {
           Move <span className="text-teal-500">DB</span>
         </Link>
       </nav>
-      <main>{children}</main>
+      <main className="px-10">{children}</main>
     </>
   )
 }

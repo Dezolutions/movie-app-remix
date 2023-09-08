@@ -48,7 +48,7 @@ export default function Index(): React.ReactElement {
                   </div>
   
                   <div className="p-4 sm:p-6 flex flex-1 flex-col">
-                    <h2 className="group-hover:text-indigo-500 mb-2 text-center text-lg font-semibold text-gray-800">
+                    <h2 className="group-hover:text-teal-500 mb-2 text-center text-lg font-semibold text-gray-800">
                       {movie.title}
                     </h2>
                     <p className="text-gray-500 line-clamp-3">{movie.overview}</p>
