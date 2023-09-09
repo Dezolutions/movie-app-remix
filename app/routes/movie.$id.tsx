@@ -1,5 +1,5 @@
 import { LoaderArgs, json } from "@remix-run/node";
-import { Link, useLoaderData, useParams } from "@remix-run/react"
+import { Link, Outlet, useLoaderData, useParams } from "@remix-run/react"
 import { MovieDetails } from "~/types";
 
 export async function loader({params}:LoaderArgs) {
@@ -30,8 +30,8 @@ export default function MovieId(): React.ReactElement {
         </Link>
       </h1>
     
-      <div className="flex gap-x-10 mt-10">
-        <div className="w-full md:w-1/2 font-medium">
+      <div className="flex flex-col md:flex-row gap-x-10 mt-10">
+        <div className="w-full md:w-1/2 mb-8 md:mb-0 font-medium">
           <p className="text-3xl font-black uppercase">About</p>
           <p className="text-gray-600 text-xl mt-1 font-normal">
             {movieDetails.overview}
@@ -48,6 +48,10 @@ export default function MovieId(): React.ReactElement {
               &nbsp;<span className="uppercase">{movieDetails.original_language}</span>
             </p>
           </div>
+        </div>
+
+        <div className="w-full md:w-1/2">
+          <Outlet/>
         </div>
       </div>
     </div>
