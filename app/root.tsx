@@ -40,12 +40,12 @@ export default function App() {
 const Layout :React.FC<{children: ReactNode}> = ({children}) => {
   return (
     <>
-      <nav className="px-10 pt-5">
+      <nav className="px-3 sm:px-8 md:px-12 pt-5">
         <Link to="/" prefetch="intent" className="text-2xl font-semibold">
           Move <span className="text-teal-500">DB</span>
         </Link>
       </nav>
-      <main className="px-10">{children}</main>
+      <main className="px-3 sm:px-8 md:px-12">{children}</main>
     </>
   )
 }
